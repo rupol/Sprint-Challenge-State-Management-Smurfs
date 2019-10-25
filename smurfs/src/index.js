@@ -9,7 +9,7 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 
 import App from "./components/App";
-import { reducer } from "./reducers/smurf";
+import { reducer } from "./reducers/smurfs";
 
 const store = createStore(reducer, applyMiddleware(thunk, logger));
 
