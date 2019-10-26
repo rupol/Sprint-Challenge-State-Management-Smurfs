@@ -6,8 +6,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Smurfs />
+        <div className="cloud">
+          <h1>Smurf Village</h1>
+        </div>
+
         <SmurfForm />
+        <Smurfs />
       </div>
     );
   }

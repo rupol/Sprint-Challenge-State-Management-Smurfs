@@ -1,28 +1,222 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin        : 0;
+  padding       : 0;
+  border        : 0;
+  font-size     : 100%;
+  font          : inherit;
+  vertical-align: baseline;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+body {
+  line-height: 1;
 }
 
-.App-title {
-  font-size: 1.5em;
+ol,
+ul {
+  list-style: none;
 }
 
-.App-intro {
-  font-size: large;
+blockquote,
+q {
+  quotes: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing : 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.task.completed {
+  text-decoration: line-through;
+}
+
+html {
+  background     : url("../img/smurf-village.jpg") no-repeat fixed center;
+  background-size: cover;
+  font-family    : 'Slackey', cursive;
+  text-align     : center;
+  color          : #3C68AE;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin   : 2rem 5%;
+}
+
+h3 {
+  font-size: 3rem;
+  margin   : 2rem 5%;
+}
+
+.cloud {
+  width : 350px;
+  height: 120px;
+
+  background: #f2f9fe;
+  background: -moz-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #f2f9fe), color-stop(100%, #d6f0fd));
+  background: -webkit-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: -o-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: -ms-linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  background: linear-gradient(top, #f2f9fe 5%, #d6f0fd 100%);
+  filter    : progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f9fe', endColorstr='#d6f0fd', GradientType=0);
+
+  position: relative;
+  margin  : 120px auto 20px;
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius   : 100px;
+  border-radius        : 100px;
+}
+
+.cloud:after,
+.cloud:before {
+  content   : '';
+  position  : absolute;
+  z-indeX   : -1;
+  background: #f2f9fe;
+}
+
+.cloud:after {
+  width : 100px;
+  height: 100px;
+
+  -webkit-border-radius: 100px;
+  -moz-border-radius   : 100px;
+  border-radius        : 100px;
+
+  top : -50px;
+  left: 50px;
+}
+
+.cloud:before {
+  width : 180px;
+  height: 180px;
+
+  -webkit-border-radius: 200px;
+  -moz-border-radius   : 200px;
+  border-radius        : 200px;
+
+  top  : -90px;
+  right: 50px;
 }

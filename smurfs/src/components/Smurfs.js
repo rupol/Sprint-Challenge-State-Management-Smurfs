@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
+import styled from "styled-components";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../actions/smurfs";
 
 import Smurf from "./Smurf";
+
+const SmurfContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Smurfs = props => {
   useEffect(() => {
@@ -11,13 +19,12 @@ const Smurfs = props => {
 
   return (
     <div className="container">
-      <h1>Ruth's Smurf Village</h1>
       {props.smurfs.length ? (
-        <div>
+        <SmurfContainer>
           {props.smurfs.map(smurf => (
             <Smurf key={smurf.id} smurf={smurf} />
           ))}
-        </div>
+        </SmurfContainer>
       ) : (
         <p>Add a smurf to your village!</p>
       )}
