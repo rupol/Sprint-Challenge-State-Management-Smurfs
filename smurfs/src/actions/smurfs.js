@@ -10,7 +10,7 @@ export function fetchSmurfs() {
     dispatch({ type: FETCH_SMURF_START });
 
     axios
-      .get(`http://localhost:3333/smurfs`)
+      .get("http://localhost:3333/smurfs")
       .then(res => {
         dispatch({ type: FETCH_SMURF_SUCCESS, payload: res.data });
       })
@@ -21,8 +21,14 @@ export function fetchSmurfs() {
 }
 
 export function addSmurf(smurf) {
-  return {
-    type: ADD_SMURF,
-    payload: smurf
+  return dispatch => {
+    axios
+      .post("http://localhost:3333/smurfs", smurf)
+      .then(res => {
+        dispatch({ type: FETCH_SMURF_SUCCESS, payload: res.data });
+      })
+      .catch(err => {
+        dispatch({ type: FETCH_SMURF_ERROR, payload: err.response });
+      });
   };
 }
