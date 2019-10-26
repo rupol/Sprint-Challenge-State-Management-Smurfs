@@ -3,6 +3,7 @@ import axios from "axios";
 export const FETCH_SMURF_START = "FETCH_SMURF_START";
 export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCESS";
 export const FETCH_SMURF_ERROR = "FETCH_SMURF_ERROR";
+export const ADD_SMURF = "ADD_SMURF";
 
 export function fetchSmurfs() {
   return dispatch => {
@@ -16,5 +17,12 @@ export function fetchSmurfs() {
       .catch(err => {
         dispatch({ type: FETCH_SMURF_ERROR, payload: err.response });
       });
+  };
+}
+
+export function addSmurf(smurf) {
+  return {
+    type: ADD_SMURF,
+    payload: smurf
   };
 }
